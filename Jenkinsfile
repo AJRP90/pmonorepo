@@ -9,8 +9,8 @@ node {
    // -- Configura variables
    echo 'Configurando variables'
    def mvnHome = 'C:/opt/maven/apache-maven-3.6.2'
-   env.PATH = "${MAVEN_HOME}/bin:${env.PATH}"
-   echo "var mvnHome='${MAVEN_HOME}'"
+   env.PATH = "${mvnHome}/bin:${env.PATH}"
+   echo "var mvnHome='${mvnHome}'"
    echo "var env.PATH='${env.PATH}'"
    
    // -- Descarga código desde SCM
@@ -20,7 +20,7 @@ node {
    
    // -- Compilando
    echo 'Compilando aplicación'
-   bat '''mvn clean compile'''
+   bat 'mvn clean compile'
    
    // ------------------------------------
    // -- ETAPA: Test
