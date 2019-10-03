@@ -20,7 +20,7 @@ node {
    
    // -- Compilando
    echo 'Compilando aplicación'
-   sh 'mvn clean compile'
+   bat 'mvn clean compile'
    
    // ------------------------------------
    // -- ETAPA: Test
