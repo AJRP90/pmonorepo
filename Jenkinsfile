@@ -15,7 +15,7 @@ node {
    
    // -- Descarga código desde SCM
    echo 'Descargando código de SCM'
-   sh 'del *'
+   //sh 'rm -rf *'
    checkout scm
    
    // -- Compilando
