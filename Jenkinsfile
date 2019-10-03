@@ -8,12 +8,12 @@ node {
    
    // -- Configura variables
    echo 'Configurando variables'
-   def mvnHome = 'C:/opt/maven/apache-maven-3.6.2'
-   def system32 = 'C:/windows/system32'
-   env.PATH = "${mvnHome}/bin:${system32}:${env.PATH}"
-   echo "var mvnHome='${mvnHome}'"
-   echo "var env.PATH='${env.PATH}'"
-   
+   //def mvnHome = 'C:/opt/maven/apache-maven-3.6.2'
+   //def system32 = 'C:/windows/system32'
+   //env.PATH = "${mvnHome}/bin:${system32}:${env.PATH}"
+   //echo "var mvnHome='${mvnHome}'"
+   //echo "var env.PATH='${env.PATH}'"
+   echo ${env.PATH}
    // -- Descarga código desde SCM
    echo 'Descargando código de SCM'
    //sh 'rm -rf *'
