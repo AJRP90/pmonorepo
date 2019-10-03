@@ -9,7 +9,8 @@ node {
    // -- Configura variables
    echo 'Configurando variables'
    def mvnHome = 'C:/opt/maven/apache-maven-3.6.2'
-   env.PATH = "${mvnHome}/bin:${env.PATH}"
+   def system32 = 'C:/windows/system32'
+   env.PATH = "${mvnHome}/bin:${system32}:${env.PATH}"
    echo "var mvnHome='${mvnHome}'"
    echo "var env.PATH='${env.PATH}'"
    
