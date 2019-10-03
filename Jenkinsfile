@@ -8,7 +8,7 @@ node {
    
    // -- Configura variables
    echo 'Configurando variables'
-   def mvnHome = tool 'M3'
+   def mvnHome = 'C:/opt/maven/apache-maven-3.6.2'
    env.PATH = "${MAVEN_HOME}/bin:${env.PATH}"
    echo "var mvnHome='${MAVEN_HOME}'"
    echo "var env.PATH='${env.PATH}'"
