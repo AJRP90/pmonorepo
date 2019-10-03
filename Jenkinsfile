@@ -13,7 +13,7 @@ node {
    //env.PATH = "${mvnHome}/bin:${system32}:${env.PATH}"
    //echo "var mvnHome='${mvnHome}'"
    //echo "var env.PATH='${env.PATH}'"
-   echo ${env.PATH}
+   echo "${env.PATH}"
    // -- Descarga código desde SCM
    echo 'Descargando código de SCM'
    //sh 'rm -rf *'
