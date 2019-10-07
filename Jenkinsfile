@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 // Load the shared libraries
-@Library('jenkins-shared-libraries')_
+//@Library('jenkins-shared-libraries')_
 
 import static groovy.io.FileType.FILES
 
@@ -10,7 +10,7 @@ def loadDiff() {
   loads = [:]
   homeChange = false
   files = findFiles(glob: '**/Jenkinsfile')
-  matches = sh(returnStdout:true, script: "git diff --name-only `git merge-base origin/${env.CHANGE_TARGET} HEAD`")
+  matches = sh(returnStdout:true, script: "git log -p -1 | grep "diff --git" | grep -v a/Jenkinsfile | cut -d '/' -f 2 | uniq")
   match_list = matches.tokenize('\n')
   match_list.each { match ->
     if (match.tokenize('/').size() == 1) {
