@@ -10,7 +10,7 @@ def loadDiff() {
   loads = [:]
   homeChange = false
   files = findFiles(glob: '**/Jenkinsfile')
-  matches = sh(returnStdout:true, script: "git log -p -1 | grep "diff --git" | grep -v a/Jenkinsfile | cut -d '/' -f 2 | uniq")
+  matches = sh(returnStdout:true, script: "git log -p -1 | grep diff | grep -v a/Jenkinsfile | cut -d '/' -f 2 | uniq")
   match_list = matches.tokenize('\n')
   match_list.each { match ->
     if (match.tokenize('/').size() == 1) {
